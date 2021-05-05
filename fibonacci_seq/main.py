@@ -6,4 +6,11 @@ def main(num):
     print(ans_num)
 
 if __name__ == '__main__':
-    main(int(sys.argv[1]))
+    try:
+        arg_num = sys.argv[1]
+        arg_num = int(arg_num)
+    except Exception as e:
+        print("please input integer arg")
+        sys.exit()
+
+    main(arg_num)
